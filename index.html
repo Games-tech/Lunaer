@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lunaer</title>
+<title>Relay</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f9c846'/%3E%3Cstop offset='.5' stop-color='%23d97cf5'/%3E%3Cstop offset='1' stop-color='%237c3aed'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M6 10L42 24L6 38L12 24L6 10Z' fill='url(%23g)'/%3E%3C/svg%3E">
 <script>document.documentElement.dataset.theme = localStorage.getItem('relay_theme') || 'dark';</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,7 +69,9 @@ a:hover{text-decoration:underline}
 .logo-lg:hover{text-decoration:none}
 .logo-lg .mark{display:inline-flex;flex:none}
 .logo-lg .mark svg{width:46px;height:46px;display:block;transition:transform .18s cubic-bezier(.34,1.56,.64,1)}
+.logo-lg .mark img{width:46px;height:46px;object-fit:contain;display:block;transition:transform .18s cubic-bezier(.34,1.56,.64,1)}
 .logo-lg:hover .mark svg{transform:scale(1.08) rotate(-8deg)}
+.logo-lg:hover .mark img{transform:scale(1.08) rotate(-8deg)}
 .logo-lg .word{font-weight:800;font-size:32px;color:var(--text)}
 .auth-form-wrap{display:grid;place-items:center;padding:24px;background:var(--bg)}
 .auth-form{width:min(380px,100%);background:var(--card);backdrop-filter:blur(16px) saturate(1.15);-webkit-backdrop-filter:blur(16px) saturate(1.15);border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:0 10px 36px rgba(0,0,0,.28)}
@@ -94,7 +96,9 @@ body.side-open .side{transform:none}
 .logo-btn:hover{text-decoration:none}
 .logo-btn .mark{display:inline-flex;flex:none}
 .logo-btn .mark svg{width:22px;height:22px;display:block;transition:transform .18s cubic-bezier(.34,1.56,.64,1)}
+.logo-btn .mark img{width:22px;height:22px;object-fit:contain;display:block;transition:transform .18s cubic-bezier(.34,1.56,.64,1)}
 .logo-btn:hover .mark svg{transform:scale(1.15) rotate(-10deg)}
+.logo-btn:hover .mark img{transform:scale(1.15) rotate(-10deg)}
 .logo-btn .word{font-weight:800;font-size:17px;color:var(--text)}
 .ins-div{height:1px;background:var(--line);margin:0 14px;flex:none}
 .side-scroll{flex:1;overflow-y:auto;overflow-x:hidden}
@@ -324,8 +328,8 @@ body.side-open .main{margin-left:274px}
 <section class="auth" id="authView">
   <div class="auth-brand">
     <div class="auth-brand-inner">
-      <a class="logo-lg" href="https://github.com/Games-tech/Lunaer/" target="_blank" rel="noopener" title="Lunaer — source on GitHub">
-        <span class="mark" data-icon="mark"></span><span class="word">Lunaer</span>
+      <a class="logo-lg" href="https://github.com/NeoCreator07/Relay" target="_blank" rel="noopener" title="Relay — source on GitHub">
+        <span class="mark"><img src="lunaer-logo.png" alt="Lunaer logo"></span><span class="word">Relay</span>
       </a>
     </div>
   </div>
@@ -347,8 +351,8 @@ body.side-open .main{margin-left:274px}
 <div class="app" id="appView" hidden>
   <aside class="side" id="sideEl">
     <div class="logo-row">
-      <a class="logo-btn" href="https://github.com/Games-tech/Lunaer/" target="_blank" rel="noopener" title="Lunaer — source on GitHub">
-        <span class="mark" data-icon="mark"></span><span class="word">Lunaer</span>
+      <a class="logo-btn" href="https://github.com/NeoCreator07/Relay" target="_blank" rel="noopener" title="Relay — source on GitHub">
+        <span class="mark"><img src="lunaer-logo.png" alt="Lunaer logo"></span><span class="word">Relay</span>
       </a>
       <button class="icon-btn" id="collapseBtn" data-icon="chevLeft" title="Hide sidebar"></button>
       <button class="icon-btn" id="settingsBtn" data-icon="sliders" title="Settings — theme &amp; background"></button>
@@ -1591,7 +1595,7 @@ function closeModal(){
     </div>
     <label>chat background</label>
     <div class="fx-grid">${Object.entries(VANTA_FX).map(([k,v])=>`<button class="fx-b" data-fx="${k}">${v.label}</button>`).join('')}</div>
-    <p class="sub mono" style="margin-top:16px">Lunaer v${VERSION}</p>
+    <p class="sub mono" style="margin-top:16px">relay v${VERSION}</p>
     <div class="m-actions"><button class="btn acc" data-close>Done</button></div>`);
   markSettings();
 };
