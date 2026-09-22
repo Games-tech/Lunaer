@@ -423,6 +423,37 @@ input{min-height:40px;border-radius:10px;background:var(--panel2)}
   .msg .ava{width:32px;height:32px}
 }
 
+
+/* ===== LUNAER 2.0 MAKEOVER ===== */
+:root{--acc:#9b7cff;--acc-hi:#b19aff;--cyan:#63e6ff;--glow:rgba(155,124,255,.28);--glass:rgba(20,20,30,.68)}
+html,body{scroll-behavior:smooth}
+body{background:radial-gradient(circle at 15% 10%,rgba(155,124,255,.10),transparent 28%),radial-gradient(circle at 85% 85%,rgba(99,230,255,.07),transparent 30%),var(--bg)}
+#vantaBg{opacity:.9;filter:saturate(1.15)}
+#app,.app,.shell{position:relative;z-index:1}
+.panel,.card,.sidebar,.chat,.members,.modal,.dialog,.topbar,.composer,.message,.server-list,.content{transition:background .35s ease,border-color .35s ease,box-shadow .35s ease,transform .25s ease}
+.panel,.card,.sidebar,.chat,.members,.topbar,.composer,.modal,.dialog{backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.btn{position:relative;overflow:hidden;border-radius:11px;transition:transform .18s cubic-bezier(.2,.8,.2,1),box-shadow .25s ease,border-color .25s ease,background .25s ease}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.btn:active{transform:translateY(1px) scale(.98);box-shadow:none}
+.btn.acc{box-shadow:0 8px 28px var(--glow)}
+.btn.acc:hover{box-shadow:0 10px 34px rgba(155,124,255,.38)}
+input{border-radius:12px;transition:border-color .22s,box-shadow .22s,background .22s,transform .18s}
+input:focus{border-color:var(--acc);box-shadow:0 0 0 4px rgba(155,124,255,.11),0 8px 30px rgba(0,0,0,.12);transform:translateY(-1px)}
+body:before,body:after{content:"";position:fixed;width:420px;height:420px;border-radius:50%;pointer-events:none;filter:blur(90px);opacity:.16;z-index:0;animation:orb 16s ease-in-out infinite alternate}
+body:before{background:#8b6cff;left:-180px;top:-170px}
+body:after{background:#39d9ff;right:-190px;bottom:-180px;animation-delay:-7s}
+@keyframes orb{to{transform:translate(90px,55px) scale(1.12)}}
+.message{transition:background .2s ease,transform .2s ease,box-shadow .2s ease}
+.message:hover{background:rgba(255,255,255,.035);transform:translateX(2px)}
+.avatar{transition:transform .22s ease,box-shadow .25s ease}
+.avatar:hover{transform:scale(1.07);box-shadow:0 0 0 4px rgba(155,124,255,.12),0 8px 25px rgba(0,0,0,.22)}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--line2),rgba(155,124,255,.5));border:2px solid transparent;background-clip:padding-box}
+.sidebar,.members,.chat,.topbar,.composer{border-color:rgba(255,255,255,.07)!important}
+@keyframes lunaerIn{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:none}}
+.modal,.dialog{animation:lunaerIn .28s cubic-bezier(.2,.8,.2,1)}
+.brand,.logo,.app-title{filter:drop-shadow(0 0 12px rgba(155,124,255,.28))}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 </style>
 <style id="lunaer-smooth-overhaul">
 :root{--acc:#9b7cff;--acc2:#6ee7ff;--glow:rgba(155,124,255,.28);--bg:#08090f;--panel:rgba(18,20,31,.78);--panel2:rgba(25,27,41,.82);--line:rgba(255,255,255,.08)}
