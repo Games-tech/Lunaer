@@ -1709,5 +1709,31 @@ document.querySelectorAll('[data-icon]').forEach(el=>{ el.insertAdjacentHTML('af
   await tryAutoLogin();
 })();
 </script>
+  <script>
+/* ================= ADMIN HOTKEY ================= */
+document.addEventListener('keydown', function(e) {
+  // Backtick key: `
+  if (e.key === '`' && !e.ctrlKey && !e.altKey && !e.shiftKey) {
+    e.preventDefault();
+
+    // Trigger the existing admin-logo click sequence.
+    // This uses the same logo element already used by the app.
+    const logo = document.querySelector(
+      '[data-icon="mark"], .logo, .logo-lg, .logo-btn'
+    );
+
+    if (!logo) return;
+
+    // Perform the existing triple-click gesture automatically.
+    for (let i = 0; i < 3; i++) {
+      logo.dispatchEvent(new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+        view: window
+      }));
+    }
+  }
+});
+</script>
 </body>
 </html>
